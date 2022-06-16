@@ -3,7 +3,6 @@ import './works.scss'
 
 export default function Works() {
     const [currentSlide, setCurrentSlide] = useState(0)
-    console.log(currentSlide)
     const data = [
         {
             id: "1",
@@ -41,7 +40,7 @@ export default function Works() {
         <div className='works' id='works'>
             <div className='slider' style={{ transform: `translateX(-${currentSlide * 100}vw)` }} >
                 {data.map(d => (
-                    <div className='container'>
+                    <div className='container' key={d.id}>
                         <div className='item'>
                             <div className='left'>
                                 <div className='leftContainer'>

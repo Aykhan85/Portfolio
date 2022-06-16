@@ -11,6 +11,12 @@
     .left {
         flex: 1;
         overflow: hidden;
+        transition: all 1s ease;
+
+        &:hover {
+
+            transform: scale(0.9);
+        }
 
         img {
             height: 100%;
